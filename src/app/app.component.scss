@@ -1,0 +1,60 @@
+/*.head {
+	position: sticky; 
+    top: 0px;
+    position: fixed; 
+}*/
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1c3b63;
+}
+th{
+    background-color: white;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style:initial;
+    width: 10rem;
+
+}
+li{
+    float: left;
+    display: block;
+}
+
+li a{
+    display: block;
+    color: rgb(188, 175, 175);
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: none;
+    color: rgb(255, 255, 255);
+    text-decoration: underline red ;
+    font-weight: 600;
+    text-underline-offset: 20px;
+}
+
+input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    float: left;
+}
+input[type=date] {
+    color: gray;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    float: left;
+}
+[type=none] {
+    float: left;
+}
+
+
+
+

@@ -1,0 +1,108 @@
+<div class="head">
+    <ul>
+        <li><a>LAMA FMS</a></li>
+        <li><a>KNJIGE</a></li>
+        <li><a>PREDMETI I PISMENA</a></li>
+        <li><a>ZADACI</a></li>
+        <li><a>OVJERE</a></li>
+        <li><a>PREGLEDI</a></li>
+        <li><a>KATALOZI</a></li>
+        <li><a>ALATI</a></li>
+        <li><a>POMOC</a></li>
+        <li><a><i class="pi pi-search" style="font-size: 1.5rem; color: rgb(188, 175, 175);"></i></a></li>
+        <p-divider type="solid"></p-divider>     
+    </ul>
+</div>
+<div class="full">
+    <ul >
+        <li><a routerlink="/Home">FILTER PRIKAZA</a></li>
+        <li><a routerlink="/Home/zadaci">ZADACI</a></li>
+    </ul>
+
+</div>
+<input type="text" class="filter" pInputText placeholder="Filter">
+<br><br>
+
+<p-table>
+    <ng-template pTemplate="header">
+        <tr>
+            
+            <th pSortableColumn="user.IDPredmetPismenoTask">ID zadatka<p-sortIcon field="user.IDPredmetPismenoTask"></p-sortIcon>
+                <input type="text">
+                <p-columnFilter type="none"></p-columnFilter></th>
+            <th pSortableColumn>P<p-sortIcon></p-sortIcon>
+                    <input type="text" style="width: 3rem">
+                    <p-columnFilter type="none"></p-columnFilter></th>
+            <th pSortableColumn="user.KratkiOpis">Opis zadatka<p-sortIcon field="user.KratkiOpis"></p-sortIcon>
+                <input type="text"  style="width: 20rem">
+                <p-columnFilter type="none"></p-columnFilter></th>
+            <th pSortableColumn="user.RokIzvrsenja">Rok Izvrsenja
+                <input type="date">
+                <p-columnFilter type="none"></p-columnFilter></th>
+            <th pSortableColumn="user.Nositelj">Nositelj zadatka<p-sortIcon field="user.Nositelj"></p-sortIcon>
+                <input type="text">
+                <p-columnFilter type="none"></p-columnFilter>
+            </th>
+            <th pSortableColumn="user.NazivTaskVrsta">Naziv vrste<p-sortIcon field="user.NazivTaskVrsta"></p-sortIcon>
+                <input type="text">
+                <p-columnFilter type="none"></p-columnFilter></th>
+            <th pSortableColumn="user.PostotakIzvrsenja">% Izvrsenja<p-sortIcon field="user.PostotakIzvrsenja"></p-sortIcon>
+                <input type="text">
+                <p-columnFilter type="none"></p-columnFilter></th>
+            <th pSortableColumn="user.Unio">Unio<p-sortIcon field="user.Unio"></p-sortIcon>
+                <input type="text">
+                <p-columnFilter type="none"></p-columnFilter></th>
+            <th pSortableColumn="user.Promijenio">Promjenio<p-sortIcon field="user.Promijenio"></p-sortIcon>
+                <input type="text">
+                <p-columnFilter type="none"></p-columnFilter></th>
+        </tr>
+        <tr *ngFor="let user of Users">
+            
+            <th>{{ user.IDPredmetPismenoTask }}</th>
+             <th>
+                <p-tableCheckbox [value]="user"></p-tableCheckbox>
+             </th>
+            <th>{{ user.KratkiOpis }}</th>
+            <th>{{ user.RokIzvrsenja }}</th>
+            <th>{{ user.Nositelj }}</th>
+            <th>{{ user.NazivTaskVrsta }}</th>
+            <th>{{ user.PostotakIzvrsenja }}</th>
+            <th>{{ user.Unio }}</th>
+            <th>{{ user.Promijenio }}</th>
+        </tr>
+    </ng-template>
+</p-table>
+<!-- pokusaj dva -->
+       <!-- <tr>
+            <th>ID zadatka
+                <p-columnFilter type="text"></p-columnFilter>
+            </th>
+            <th>Opis zadatka
+                <p-columnFilter type="text"></p-columnFilter>
+                
+            </th>
+            <th>Rok izvrsenja
+                <p-columnFilter type="text"></p-columnFilter>
+            </th>
+            <th>Nositelj zadatka
+                <p-columnFilter type="text"></p-columnFilter>
+            </th>
+            <th>Naziv vrste
+                <p-columnFilter type="text"></p-columnFilter>
+            </th>
+            <th>%
+                <p-columnFilter type="text"></p-columnFilter>
+            </th>
+            <th>Unio
+                <p-columnFilter type="text"></p-columnFilter>
+            </th>
+            <th>Klasa
+                <p-columnFilter type="text"></p-columnFilter>
+            </th>
+        </tr>-->
+
+<div>
+    <router-outlet></router-outlet>
+</div>
+
+

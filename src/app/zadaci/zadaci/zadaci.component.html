@@ -1,0 +1,65 @@
+<div>
+    <router-outlet>
+    </router-outlet>
+</div>
+<p-table [lazy]="true" responsiveLayout="scroll" dataKey="id"
+    [paginator]="true" [rows]="10" [globalFilterFields]="['name','country.name', 'company', 'representative.name']">
+    <ng-template pTemplate="header">
+        <tr>
+            
+            <th>ID zadatka</th>
+            <!--<th>P</th>-->
+            <th>Opis zadatka</th>
+            <th>Rok Izvrsenja</th>
+            <th>Nositelj zadatka</th>
+            <th>Naziv vrste</th>
+            <th>% Izvrsenja</th>
+            <th>Unio</th>
+            <th>Klasa</th>
+           <!--<th>Promjenio</th>-->
+        </tr>
+        <tr>
+            <!--
+            <th style="width: 1rem">
+                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>-->
+            <th>
+                <input type="text">
+                <p-columnFilter type="none"></p-columnFilter>
+            </th>
+            <th style="width:70%">
+                <input type="text">
+                <p-columnFilter type="none"></p-columnFilter>
+                
+            </th>
+            <th>
+                <input type="date">
+                <p-columnFilter type="none"></p-columnFilter>
+            </th>
+            <th>
+                <input type="text">
+                <p-columnFilter type="none"></p-columnFilter>
+            </th>
+            <th>
+                <input type="text">
+                <p-columnFilter type="none"></p-columnFilter>
+            </th>
+            <th>
+                <input type="text">
+                <p-columnFilter type="none"></p-columnFilter>
+            </th>
+            <th>
+                <input type="text">
+                <p-columnFilter type="none"></p-columnFilter>
+            </th>
+            <th>
+                <input type="text">
+                <p-columnFilter type="none"></p-columnFilter>
+            </th>
+        </tr>
+    </ng-template>
+</p-table>
+
+
+
+
